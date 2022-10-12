@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <h1 id="titre"> Que le jeu commence</h1>
+    <div id="btn-red"></div> 
+    <div id="btn-blue"></div>
+    <button id="button" type="button" onClick="Refresh()">Recommencer</button>
+    <div id="play">></div>
+
+    // Rafraichir la page au click du boutton
+<script>
+    function Refresh() {
+        window.parent.location = window.parent.location.href;
+    }
+</script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
