@@ -1,0 +1,46 @@
+
+class Calculette {
+    constructor(nombre1, nombre2){
+        this.nombre1 = nombre1;
+        this.nombre2 = nombre2;
+    }
+
+    additionner(){
+       return this.nombre1+this.nombre2;
+    }
+
+    soustraire(){
+        return this.nombre2-this.nombre1;
+    }
+
+    multiplier(){
+        return  this.nombre1*this.nombre2;
+    }
+
+    diviser(){
+        if(this.nombre2==0){
+            throw new Error('La division est impossible');
+        }
+        return this.nombre1/this.nombre2;
+    }
+
+    modulo(){
+        if(this.nombre2==0){
+            throw new Error('La division est impossible');
+        }
+        return this.nombre1%this.nombre2;
+    }
+
+}
+
+let calc = new Calculette (6, 10);
+
+calc.additionner();
+calc.soustraire();
+calc.multiplier();
+calc.diviser();
+calc.modulo();
+
+calc.nombre1 = 7;
+calc.nombre2 = 10;
+
