@@ -1,0 +1,73 @@
+using System;
+
+namespace premier_programme
+{
+    class Program
+    {
+        //FONCTION NOM
+        static string DemanderNom(int numeroPersonne)
+        {
+            string nom = "";
+
+            while (nom == "")
+            {
+                Console.Write("Quel est le nom de la personne " + numeroPersonne +  " ? " );
+                nom = Console.ReadLine();
+                nom = nom.Trim();
+
+                if (nom == "")
+                {
+                    Console.WriteLine("Erreur, le nom ne doit pas être vide");
+                }
+            }
+            return nom;
+        }
+
+        //FONCTION AGE
+        static int DemanderAge(string nomPersonne)
+        {
+            int age_num = 0;
+
+            while (age_num <= 0)
+            { 
+                Console.Write( nomPersonne  + ", quel est ton âge ? ");
+                string age_str = Console.ReadLine();
+   
+                try
+                {
+                    age_num = int.Parse(age_str);
+
+                    if (age_num <= 0)
+                    {
+                        Console.WriteLine("Erreur, vous devez rentrer une date valide");
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Erreur, vous devez rentrer une date valide");
+                }
+            }
+            return age_num; 
+        }
+        static void Main(string[] args)
+        {
+            //DEMANDER LE NOM 
+            string nom1 = DemanderNom(1);
+            string nom2 = DemanderNom(2);
+
+            //DEMANDER AGE 
+            int age1 = DemanderAge(nom1);
+            int age2 = DemanderAge(nom2);
+
+            //AFFICHER RESULTATS
+            Console.WriteLine();
+            Console.WriteLine("Bonjour, vous vous appelez " + nom1 + " , vous avez " + age1 + " ans");          
+            Console.WriteLine("Bientôt vous aurez " + (age1+1) + " ans");
+
+            Console.WriteLine();
+            Console.WriteLine("Bonjour, vous vous appelez " + nom2 + " , vous avez " + age2 + " ans");          
+            Console.WriteLine("Bientôt vous aurez " + (age2+1) + " ans ");
+
+        }
+    }
+}
