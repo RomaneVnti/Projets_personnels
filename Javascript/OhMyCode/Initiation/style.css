@@ -1,0 +1,85 @@
+
+/*Modification de tout le document */f
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/*Modification du corps du document*/
+
+h1{
+    color:dimgrey
+}
+
+html{
+    font-size: 62.5%; /*équivaut à 1rem=10px*/
+}
+
+body{
+    font-size: 1.4rem;
+    font-family: arial;
+    color: white;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E2337;
+}
+
+#btn-red{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    animation-name: rouge;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#btn-blue{
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation-name: bleu;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes rouge{
+    0% {left:0xp; top:0px;}
+    25% {left:200xp; top:0px;}
+    50% {left:200xp; top:200px;}
+    75% {left:0xp; top:200px;}
+    100% {left:0xp; top:0px;}
+}
+
+@keyframes bleu{
+    0% {left:0xp; top:0px;}
+    25% {left:0xp; top:200px;}
+    50% {left:200xp; top:200px;}
+    75% {left:200xp; top:0px;}
+    100% {left:0xp; top:0px;}
+}
+
+#button{
+    display: block;
+    margin:auto;
+    text-align: center;
+}
+
+#titre{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
