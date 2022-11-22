@@ -1,0 +1,66 @@
+
+/* CORPS DU DOCUMENT*/
+
+body{
+    background-color: #FAEEE7; /* Couleur fond du document*/
+    font-family: SansS;
+}
+
+
+/* HEADER*/
+
+/* Creation du bandeau blanc */
+header.container_1{
+    background-color: white; /* Couleur du fond d'écran de la bordure*/
+    width: 1200px;
+    height: 200px;
+    border: 1px solid white;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+
+}
+
+/* Barre de navigation*/
+
+#navbarHeader ul {
+    list-style-type: none; /* On enlève la liste à puce */
+    padding: 0;
+    font-size: 20px; /* Taille de police */
+    margin-left: 450px; /* Marge à gauche défini pour espacer la barre du logo*/
+
+}
+#navbarHeader a {
+    text-decoration: none; /* On enlève le soulignement des liens dans la liste*/
+    color: #850002;
+    margin-left: 50px; /* On défini une marge pour espacer chaque lien*/
+
+}
+
+#navbarHeader li{
+    display: inline; /* Pour aligner en line les li */
+    justify-content: space-between; /* Pour espacer les éléments */
+    flex-direction: row; /*Pour mettre en ligne */
+
+}
+
+
+/*Creation d'un encadré coloré pour le btn */
+
+#Btn_Authentification a {
+    box-sizing: border-box;
+    border: 10px solid #FAEEE7;
+    background-color: #FAEEE7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition:transform .4s;
+
+}
+
+/* Les interactions lors du survol de la souris*/
+
+#Btn_Authentification.btn_id a:hover{
+    cursor:pointer;
+    transform:scale(1.2);
+}
